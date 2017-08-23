@@ -1,4 +1,4 @@
-/*Import log4js*/
+/* Import log4js */
 const log4js = require('log4js');
 const logger = log4js.getLogger();
 const readline = require('readline');
@@ -9,7 +9,7 @@ let convert = function(year) {
 	/* Returns an EventEmitter of type Interface initialized
 	with an input read stream with the CSV file */
 	const rl = readline.createInterface({
-		input: fs.createReadStream('../inputdata/India2011.csv')
+		input: fs.createReadStream('../inputdata/indiacensus')
 	});
 
 	if (isNaN(year)) {
@@ -36,7 +36,7 @@ let convert = function(year) {
 	by Interface when CSV read is complete is completed */
 	rl.on('close', () => {
 		let finalJson = JSON.stringify(final);
-		fs.writeFile('../outputdata/IndiaCensusAmardeep.json', finalJson, function(err) {
+		fs.writeFile('../outputdata/IndiaCensusMyName.json', finalJson, function(err) {
 			if (err) {
 				throw err;
 			}
