@@ -11,7 +11,7 @@ describe("A series of test for Converting  CSV to JSON",
   function(err){
     it("should return sucess message", function(done){
      var result = convert(2001);
-     result.should.be.equal('JSON is written successfully');
+     result.should.be.equal('JSON');
      done();
    });
     it('should fail if year is notprovided', function(done){
